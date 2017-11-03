@@ -14,6 +14,7 @@ body {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .topnav a:hover {
@@ -25,7 +26,7 @@ body {
   display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
@@ -33,7 +34,7 @@ body {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
@@ -51,7 +52,7 @@ header{
   background-color: gray;
   height: 150px
 }
-header h1,p {
+header h1, header p {
   padding: 10px;
   font-family: 'Open Sans', sans-serif;
   color:  #111;
@@ -94,7 +95,7 @@ header h1,p {
     border: 1px solid black;
     height: 220px;
 }
-@media only screen and (max-width: 600px)  {
+@media only screen and (max-width: 800px)  {
   #box {
     grid-template-columns: 100%;
     grid-template-areas:
@@ -104,7 +105,7 @@ header h1,p {
         "gridst";
       }
   }
-@media only screen and (min-width: 600px)   {
+@media only screen and (min-width: 801px)   {
         #box {
             grid-template-columns:50% 50%;
             grid-template-areas:
@@ -145,8 +146,8 @@ main {
   grid-column: 1;
 }
 aside {
-  grid-row: 2;
-  grid-column: 1;
+  grid-row: 1;
+  grid-column: 2;
   max-height: 684px; 
 }           
         }
@@ -156,19 +157,196 @@ aside {
 }
 .right {
   float: right;
+  margin-right:5px
 }
-main h2{
+article h2{
   text-align: center;
   font-family: 'Roboto', sans-serif;
 }
-main p{
+article p{
   font-family: 'Roboto', sans-serif;
 }
 footer {
   height: 200px;
   background-color: gray;
 }
-footer h4 {
+footer h3 {
+  padding-top: 50px;
   text-align: center;
   font-family: 'Roboto', sans-serif;
+  margin: 0px;
+}
+footer p {
+  margin: 0px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  padding-top: 8px;
+}
+main h2 {
+  font-family: 'Roboto', sans-serif;
+}
+main p {
+  font-family: 'Roboto', sans-serif;
+}
+main i {
+  margin-right: 2px;
+}
+#exstra {
+  padding: 10px;
+}
+#margin {
+  margin-top: 20px;
+}
+#box3 {
+  display: grid;
+}
+@media only screen and (min-width: 800px)  {
+  #box3 {
+  grid-auto-columns: 85% 15%;
+  grid-auto-rows:850px;
+      }
+  main {
+  grid-row: 1;
+  grid-column: 1;
+}
+aside {
+  grid-row: 1;
+  grid-column: 2;
+}    
+  }
+@media only screen and (max-width: 800px)   {
+        #box3 {
+  grid-auto-columns: 100%;
+  grid-auto-rows:968px 484px;
+      }
+main {
+  grid-row: 1;
+  grid-column: 1;
+}
+aside {
+  grid-row: 2;
+  grid-column: 1;
+  max-height: 484px; 
+}           
+        }
+}
+main nav ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    font-family: 'Roboto', sans-serif;
+}
+
+main nav li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+main nav li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+ main nav li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+
+}
+#box4 {
+  display: grid;
+  grid-template-areas:
+  "grid6"
+  "grid7";
+}
+#grid6 {
+    grid-area: anime;
+    padding: 10px;
+    max-height: 830px;
+    height: 395px;
+    border-right: 1px solid black;
+}
+
+#grid7 {
+  grid-area: games;
+  padding: 10px;
+  height: 395px;
+  max-height: 395px;
+}
+#grid8 {
+  grid-area: ik;
+  padding: 10px;
+  height: 250px;
+  max-height: 250px;
+}
+@media only screen and (max-width: 800px)  {
+  #box4 {
+    grid-template-columns: 100%;
+    grid-template-areas:
+        "ik"
+        "anime"
+        "games";
+      }
+  }
+@media only screen and (min-width: 800px)   {
+        #box4 {
+            grid-template-columns:50% 50%;
+            grid-template-areas:
+          "ik ik"
+          "anime games";
+        }
+}
+#box5 {
+  display: grid;
+}
+@media only screen and (min-width: 800px)  {
+  #box5 {
+  grid-auto-columns: 85% 15%;
+  grid-auto-rows:750px;
+      }
+  #main {
+  grid-row: 1;
+  grid-column: 1;
+}
+#aside {
+  grid-row: 1;
+  grid-column: 2;
+}    
+  }
+@media only screen and (max-width: 800px)   {
+        #box5 {
+  grid-auto-columns: 100%;
+  grid-auto-rows:1000px 484px;
+      }
+#main {
+  grid-row: 1;
+  grid-column: 1;
+}
+#aside {
+  grid-row: 2;
+  grid-column: 1;
+  max-height: 484px; 
+}           
+        }
+}
+main h2 , main p {
+  font-family: 'Roboto', sans-serif;
+}
+footer a:visited {
+  color: black;
+}
+.left2 {
+  float: left;
+  width: 275px;
+  height: 175px;
+}
+.right2 {
+  float: right;
+  width: 275px;
+  height: 175px;
 }
