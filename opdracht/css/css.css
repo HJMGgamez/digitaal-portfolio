@@ -152,6 +152,13 @@ aside {
 }           
         }
 }
+#left3{
+  float: left;
+  width: 150px;
+  height: 150px;
+  max-width: 150px;
+  max-height: 150px;
+}
 .left {
   float: left;
 }
@@ -349,4 +356,18 @@ footer a:visited {
   float: right;
   width: 275px;
   height: 175px;
+}
+#left {
+  float: left;
+  width: 150px;
+  height: 150px;
+  max-width: 150px;
+  max-height: 150px;
+}
+#right {
+  float: right;
+  width: 150px;
+  height: 150px;
+  max-width: 150px;
+  max-height: 150px;
 }
